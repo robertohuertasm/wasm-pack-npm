@@ -1,6 +1,6 @@
 {
   "name": "wasm-pack-npm",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Use wasm-pack from npm",
   "main": "./bin/index.js",
   "bin": {
@@ -34,7 +34,7 @@
     "build:prod": "npm run clean && npm run lint && tsc -p tsconfig.prod.json && npm run permission",
     "permission": "chmod +x bin/index.js",
     "test": "jest --runInBand --forceExit --detectOpenHandles --coverage",
-    "start:dev": "npm run build && tsc -p tsconfig.dev.json -w",
+    "start": "npm run build && tsc -p tsconfig.dev.json -w",
     "pretty": "prettier --write \"src/**/*.ts\"",
     "precommit": "lint-staged",
     "prepublishOnly": "npm run build:prod",

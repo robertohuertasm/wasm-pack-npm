@@ -4,15 +4,15 @@
 
 [![Build Status](https://travis-ci.org/robertohuertasm/wasm-pack-npm.svg?branch=master)](https://travis-ci.org/robertohuertasm/wasm-pack-npm)
 
-Installs `wasm-pack` so you can build `wasm` npm packages.
+Installs `wasm-pack` and all the needed dependencies so you can build `wasm` npm packages.
+
+Check out the [wasm-pack documentation](https://rustwasm.github.io/wasm-pack/book/) if you want to know more.
 
 ## How to use it
 
-`npm i -g wasm-pack-npm`
+Executing `npm i -g wasm-pack-npm` will automatically install `wasm-pack` and all the dependencies in your machine.
 
-It will automatically install `wasm-pack` in your machine.
-
-By running `wasm-pack-npm` you will be able to retry the installation in case something went wrong.
+In case something goes wrog, you will be able to retry the installation by executing `wasm-pack-npm` in your terminal.
 
 ## TODO
 
@@ -28,4 +28,13 @@ By running `wasm-pack-npm` you will be able to retry the installation in case so
 
 ## Development
 
-While developing it is quite useful to use `npm run start:dev`. This will keep `tsc` compilling while you change the files.
+While developing it is quite useful to use `npm start`. This will keep `tsc` compilling while you change the files.
+
+## Tests
+
+In order to execute the tests just run: `npm test`.
+
+If you want to debug the tests and you're using `visual studio code` you'll find some `launch` settings that will help you with that:
+
+- jest all: debugs all tests.
+- jest current: only debugs the current selected test.
