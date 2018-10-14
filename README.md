@@ -16,7 +16,7 @@ In case something goes wrog, you will be able to retry the installation by execu
 
 ## TODO
 
-[ ] Tests pending
+[x] Tests pending
 
 [ ] Windows support
 
