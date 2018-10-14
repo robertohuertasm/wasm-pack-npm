@@ -1,0 +1,10 @@
+{
+  "tslint.enable": true,
+  "prettier.semi": true,
+  "prettier.trailingComma": "all",
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "files.insertFinalNewline": true,
+  "vsicons.presets.angular": true,
+  "editor.tabSize": 2,
+  "editor.formatOnSave": true
+}

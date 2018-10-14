@@ -1,0 +1,66 @@
+{
+  "name": "wasm-pack-npm",
+  "version": "0.0.1",
+  "description": "Use wasm-pack from npm",
+  "main": "./bin/index.js",
+  "bin": {
+    "wasm-pack-npm": "./bin/index.js"
+  },
+  "dependencies": {
+    "shelljs": "^0.8.2"
+  },
+  "devDependencies": {
+    "@types/jest": "^23.3.5",
+    "@types/node": "^10.11.7",
+    "@types/shelljs": "^0.8.0",
+    "babel-preset-typescript": "^7.0.0-alpha.19",
+    "concurrently": "^4.0.1",
+    "husky": "^1.1.2",
+    "jest": "^23.6.0",
+    "jest-preset-typescript": "^1.2.0",
+    "lint-staged": "^7.3.0",
+    "node-dev": "^3.1.3",
+    "prettier": "^1.14.3",
+    "rimraf": "^2.6.2",
+    "ts-jest": "^23.10.4",
+    "tslint": "^5.11.0",
+    "tslint-config-prettier": "^1.15.0",
+    "typescript": "^3.1.3"
+  },
+  "scripts": {
+    "clean": "rimraf bin coverage",
+    "lint": "tslint -p .",
+    "build": "npm run clean && npm run lint && tsc -p tsconfig.dev.json && npm run permission",
+    "build:prod": "npm run clean && npm run lint && tsc -p tsconfig.prod.json && npm run permission",
+    "permission": "chmod +x bin/index.js",
+    "test": "jest --runInBand --forceExit --detectOpenHandles --coverage",
+    "start:dev": "npm run build && tsc -p tsconfig.dev.json -w",
+    "pretty": "prettier --write \"src/**/*.ts\"",
+    "precommit": "lint-staged",
+    "prepublishOnly": "npm run build:prod",
+    "postinstall": "node ./scripts/saferun"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/robertohuertasm/wasm-pack-npm.git"
+  },
+  "keywords": [
+    "wasm-pack",
+    "webassembly",
+    "npm",
+    "rust"
+  ],
+  "author": "Roberto Huertas <roberto.huertas@outlook.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/robertohuertasm/wasm-pack-npm/issues"
+  },
+  "homepage": "https://github.com/robertohuertasm/wasm-pack-npm#readme",
+  "lint-staged": {
+    "src/**/*.ts": [
+      "prettier --parser typescript --write",
+      "git add",
+      "tslint"
+    ]
+  }
+}

@@ -1,0 +1,12 @@
+.prettierrc
+.prettierignore
+.travis.yml
+jest.config.js 
+tsconfig.json
+tsconfig.dev.json
+tsconfig.prod.json
+tslint.json
+wallaby.js
+.vscode/
+tests/
+src/
