@@ -12,14 +12,14 @@ export const messages = {
     `${emoji(
       '😊',
       '✅',
-    )}   It seems that Rust is already installed in your machine.`,
+    )}  It seems that Rust is already installed in your machine.`,
   ),
   wasmpackInstalling: normal(`${emoji('⌛', '⭐️')}  Installing wasm-pack...`),
   wasmpackAlreadyInstalled: normal(
     `${emoji(
       '😊',
       '✅',
-    )}   It seems that Wasm-Pack is already installed in your machine.`,
+    )}  It seems that Wasm-Pack is already installed in your machine.`,
   ),
   error: wrong(`${emoji('😔', '❌')}  Something went wrong:`),
   setNightly: chalk.red(

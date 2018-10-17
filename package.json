@@ -1,7 +1,7 @@
 {
   "name": "wasm-pack-npm",
-  "version": "0.1.0",
-  "description": "Use wasm-pack from npm",
+  "version": "0.1.1",
+  "description": "Installs wasm-pack and all the needed dependencies so you can build wasm npm packages.",
   "main": "./bin/index.js",
   "bin": {
     "wasm-pack-npm": "./bin/index.js"
