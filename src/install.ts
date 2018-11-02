@@ -76,6 +76,10 @@ function getRustInstallerCommand(): string {
 }
 
 function getCommand(url: string, extraParams: string = ''): string {
+  // TODO: ALLOW POWERSHELL
+  // if (platform() === 'win32') {
+  //   return `Invoke-WebRequest -Uri https://win.rustup.rs/ -Outfile rustup-init.exe; .\\rustup-init.exe -y`;
+  // }
   return isCurlInstalled()
     ? `curl ${url} -sSf | sh ${extraParams}`
     : `wget -q -O- ${url} | sh ${extraParams}`;
