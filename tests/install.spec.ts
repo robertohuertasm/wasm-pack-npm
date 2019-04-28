@@ -156,20 +156,20 @@ describe('Install test', () => {
       expect(exec.mock.calls[0][0]).toContain('rustwasm.github.io/wasm-pack');
     });
 
-    test('after wasm-pack installation nightly is set up', () => {
-      install();
-      expect(exec.mock.calls[2][0]).toContain('rustup default nightly');
-    });
+    // test('after wasm-pack installation nightly is set up', () => {
+    //   install();
+    //   expect(exec.mock.calls[2][0]).toContain('rustup default nightly');
+    // });
 
-    test('after wasm-pack installation nightly is set up', () => {
-      install();
-      expect(exec.mock.calls[3][0]).toContain('wasm32-unknown-unknown');
-    });
+    // test('after wasm-pack installation nightly is set up', () => {
+    //   install();
+    //   expect(exec.mock.calls[3][0]).toContain('wasm32-unknown-unknown');
+    // });
 
-    test('after wasm-pack installation nightly is set up', () => {
-      install();
-      expect(exec.mock.calls[4][0]).toContain('cargo install cargo-generate');
-    });
+    // test('after wasm-pack installation nightly is set up', () => {
+    //   install();
+    //   expect(exec.mock.calls[4][0]).toContain('cargo install cargo-generate');
+    // });
   });
 
   describe('Error in OutPutReturnValue', () => {

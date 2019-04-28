@@ -19,12 +19,12 @@ export function install(): void {
     return;
   }
 
-  execCommand('rustup default nightly', msg.setNightly);
+  // execCommand('rustup default nightly', msg.setNightly);
   execCommand(
     'rustup target add wasm32-unknown-unknown --toolchain nightly',
     msg.setWasm32,
   );
-  execCommand('cargo install cargo-generate', msg.cargoGenerateInstalling);
+  // execCommand('cargo install cargo-generate', msg.cargoGenerateInstalling);
   console.log(msg.final);
 }
 
@@ -56,6 +56,7 @@ function execCommand(command: string, message?: string): ExecOutputReturnValue {
   if (message) {
     console.log(message);
   }
+  // command = 'export PATH=$HOME/.cargo/bin:$PATH;' + command;
   const xCommand = shelljs.exec(command, { silent: true });
   if (isOutputReturnValue(xCommand)) {
     return xCommand;

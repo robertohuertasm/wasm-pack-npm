@@ -12,7 +12,15 @@ Check out the [wasm-pack documentation](https://rustwasm.github.io/wasm-pack/boo
 
 Executing `npm i -g wasm-pack-npm` will automatically install `wasm-pack` and all the dependencies in your machine.
 
-In case something goes wrog, you will be able to retry the installation by executing `wasm-pack-npm` in your terminal.
+In case something goes wrong, you will be able to retry the installation by executing `wasm-pack-npm` in your terminal.
+
+## Docker
+
+If you plan to use it in `Docker` you'll have to set this in the `PATH`:
+
+`export PATH=$HOME/.cargo/bin`
+
+This is very important. If you don't use properly set the path the installation will fail.
 
 ## Development
 
