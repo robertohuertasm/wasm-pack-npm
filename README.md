@@ -22,6 +22,8 @@ If you plan to use it in `Docker` you'll have to set this in the `PATH`:
 
 This is very important. If you don't use properly set the path the installation will fail.
 
+In addition, `npm i -g wasm-pack-npm` seems to ignore the `PATH` setting, but it works if `wasm-pack-npm` is set as one of the `devDependencies` of your npm package.
+
 ## Development
 
 While developing it is quite useful to use `npm start`. This will keep `tsc` compilling while you change the files.
